@@ -15,14 +15,13 @@ vine.messagesProvider = new SimpleMessagesProvider(messages);
 
 export const checkInputValues = vine.compile(
     vine.object({
-        email: vine.string().email().minLength(5).maxLength(100).required(),
-        nome: vine.string().minLength(2).maxLength(60).required(),
-        senha: vine.string().minLength(6).maxLength(30).required(),
+        email: vine.string().email().minLength(5).maxLength(100),
+        nome: vine.string().minLength(2).maxLength(60),
+        senha: vine.string().minLength(6).maxLength(30),
         cpf: vine.string()
             .regex(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/)
             .minLength(14)
-            .maxLength(14)
-            .required(),
-        dataNascimento: vine.date().required(),
+            .maxLength(14),
+        dataNascimento: vine.date(),
     }),
 );
