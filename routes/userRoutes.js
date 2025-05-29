@@ -9,7 +9,7 @@ const userRoutes = Router();
     //All
     userRoutes.get('/', admPassword, UserController.getAll);
     //ById
-    userRoutes.get('/:id', authUserMiddleware, UserController.getById);
+    userRoutes.get('/id', authUserMiddleware, UserController.getById);
 //POST
     //Create
     userRoutes.post('/', UserController.create);
