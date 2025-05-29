@@ -110,7 +110,7 @@ class UserController {
     static async getById(req, res) {
         try {
             const user = await User.findByPk(req.userId, {
-                attributes: { exclude: ['senha'] }
+                attributes: { exclude: ['senha', 'cpf', 'createdAt', 'id', 'updatedAt'] }
             });
 
             if (!user) {
